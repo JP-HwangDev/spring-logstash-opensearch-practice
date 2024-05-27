@@ -1,0 +1,1 @@
+# spring-logstash-opensearch-practice
