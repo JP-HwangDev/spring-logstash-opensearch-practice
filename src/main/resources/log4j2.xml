@@ -23,8 +23,7 @@
                 <TimeBasedTriggeringPolicy interval="1" modulate="true" />
             </Policies>
         </RollingFile>
-        <Socket name="socket" host="${sys:logstash.host.name:-localhost}" port="${sys:logstash.port.number:-5001}" reconnectionDelayMillis="5000">
-<!--        <Socket name="socket" host="${sys:logstash.host.name:-192.168.50.10}" port="${sys:logstash.port.number:-9600}" reconnectionDelayMillis="5000">-->
+        <Socket name="socket" host="${sys:logstash.host.name}" port="${sys:logstash.port.number}" reconnectionDelayMillis="5000"><!--        <Socket name="socket" host="${sys:logstash.host.name:-192.168.50.10}" port="${sys:logstash.port.number:-9600}" reconnectionDelayMillis="5000">-->
             <Filters>
                 <MarkerFilter marker="LOGSTASH" onMatch="ACCEPT" onMismatch="DENY"/>
             </Filters>

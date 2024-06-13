@@ -20,8 +20,8 @@ import java.security.NoSuchAlgorithmException;
 
 public class OpensearchConfig {
 
-    final String index_name = "searchlogs";
-    final HttpHost host = new HttpHost("http", "localhost", 9200);
+    final String index_name = "slo";
+    final HttpHost host = new HttpHost("https", "localhost", 9200);
     final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
     @Bean
     public OpenSearchClient OpensearchInit() throws Exception {
